@@ -30,9 +30,9 @@ public class ZuulLoggingFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-//getting the current HTTP request that is to be handle
+        //getting the current HTTP request that is to be handled
         HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
-//printing the detail of the request
+        //printing the detail of the request
         logger.info("request -> {} request uri-> {}", request, request.getRequestURI());
         return null;
     }
